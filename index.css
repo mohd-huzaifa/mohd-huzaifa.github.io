@@ -1,0 +1,432 @@
+*{
+    padding: 0px;
+    margin:0px;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(to right , rgba(0,0,0,0) , rgba(0,0,0,.1)), url("back1.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+
+
+nav{
+   
+    height: 60px;
+    width: 100%;
+}
+
+label.Logo{
+    color: white;
+    font-size: 35px;
+    line-height: 60px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 60px;
+    margin: 0 5px;
+
+}
+nav ul li a{
+    color: aliceblue;
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    transition: .5s;
+    background: red;
+}
+
+.checkbtn{
+    font-size: 30px;
+    float: right;
+    line-height: 60px;
+    margin-right: 40px;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width:950px){
+    label.Logo{
+        font-size: 25px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+
+    body{
+        background-image: url("back1.jpg");
+        height: 100vh;
+        background-size: cover;
+    }
+}
+
+
+@media (max-width:425px){
+    label.Logo{
+        font-size: 22px;
+        color: rgb(249, 99, 182);
+        padding: 5px;
+        position: relative;
+        left: 10px;
+        
+    }
+}
+
+@media (max-width : 800px){
+    .checkbtn{
+        display: block;
+    }
+     nav ul{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background:skyblue;
+        top: 60px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 1;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0px;
+        line-height: 30px;
+    }
+    a:hover{
+        background-color: none;
+
+    }
+    nav ul li:hover{
+        background: none;
+        color: aquamarine;
+
+    }
+    #check:checked ~ ul{
+        left: 0px;
+    }
+
+   
+   
+}
+
+.checkbtn img{
+    border: 2px solid white;
+    border-radius: 50%;
+    vertical-align: middle;
+    position: absolute;
+    top: 9px;
+    right: 15px;
+}
+
+.Logo:hover{
+    color: cyan;
+}
+
+/* here we to code of our mmain part */
+
+.main-content{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    display: flex;
+    height: 300px;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.inner-content{
+    display: block;
+    height: 100px;
+    width: 300px;
+    text-align: center;
+
+    
+}
+.inner-content p{
+    font-size: 20px;
+    color: coral;
+}
+ .inner-content .name{
+    font-size: 35px;
+    color: rgb(73, 240, 249);
+}
+.inner-content h4{
+    font-size: 30px;
+    color: rgb(245, 178, 55);
+}
+
+.image{
+    display: inline-block;
+    height: 300px;
+    width: 30%;
+    text-align: center;
+}
+.image img{
+    border-radius: 50%;
+    position: relative;
+    top: 25px;
+    
+}
+
+
+@media (max-width:850px){
+    .image img{
+        height: 150px;
+        width: 150px;
+
+    }
+
+    .image, .content{
+        height: 200px;
+    }
+    body{
+        background-image: url("back1.jpg");
+        background-size: cover;
+    }
+}
+
+@media (max-width:600px){
+    .image{
+        width: 40%;
+    }
+    .content{
+        width: 60%;
+    }
+    .inner-content{
+        width: 100%;
+    }
+    body{
+        background-image: url("back1.jpg");
+        background-size: cover;
+    }
+}
+
+@media (max-width:400px){
+    .main-content{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .image, .content{
+        width: 100%;
+    }
+
+    body{
+        background-image: url("back1.jpg");
+        background-size: cover;
+    }
+}
+
+
+
+.education{
+    display: flex;
+    height: 500px;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    background-color: snow;
+
+
+}
+
+
+
+.edu-section{
+    display: block;
+    height: 270px;
+    width: 30%;
+    border: 1px solid gray;
+    float: left;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: inset 0px 0px 2px 1px rgb(222, 226, 227);
+    border: none;
+    background: linear-gradient(to right , rgb(233, 79, 184) , rgb(85, 210, 251) ) ;
+    
+   
+
+}
+
+.edu-section h3,.intro-info h2 ,  .skills-info h2 , .contact-info h2{
+    text-align: center;
+    background: linear-gradient(45deg, red , rgb(63, 245, 63));
+    color: whitesmoke;
+    padding: 10px;
+    border-radius: 15px 15px 0px 0px ;
+    
+}
+
+.edu-section ul{
+    display: block;
+    list-style: none;
+    color: white;
+    padding: 10px;
+    position: relative;
+    top: 5px;
+    font-size: 19px;
+    line-height: 30px;
+   
+    
+    
+}
+.edu-section ul li{
+    display: block;
+    
+    
+}
+
+
+
+@media (max-width:750px){
+    .edu-section{
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+        height: 250px;
+        background: linear-gradient(to left , rgb(249, 48, 215), rgb(246, 199, 78));
+        
+       
+
+        
+    }
+
+    .education{
+        display:inline-block;
+        min-height: 600px ;
+        justify-content: center;
+    
+    }
+
+    .edu-section ul , .skills-info ul  {
+        font-size: 18px;
+        color: snow;
+    }
+   
+}
+
+@media (max-width:560px){
+    .edu-section{
+        width: 95%;
+        height: 300px;
+    }
+
+    .education{
+        display: block;
+        min-height: 1000px;
+        padding: 2.5%;
+        justify-content: center;
+
+    }
+
+}
+
+ footer{
+    display: flex;
+    background-color: beige;
+    padding: 15px;
+    text-decoration-style: solid;
+    color: rgb(226, 115, 197);
+    position: fixed;
+    bottom: -10px;
+    width: 100%;
+    justify-content: center;
+ }
+
+ footer p:hover{
+        color: black;
+        font-family: 'Times New Roman', Times, serif;
+ }
+ .text-content p , h1{
+    display: block;
+ }
+
+ .about-main-heading, .introduction,.skill-section , .contact-section{
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    background-color: lightcyan;
+    color: cyan;
+    
+ }
+
+ .about-main-heading h2 , .introduction h2 , .skill-section h2 , .contact-section h2{
+    font-size: 35px;
+ }
+
+ .intro,.skills ,.contact {
+    display: flex;
+    width: 100%;
+    height: 400px;
+    background-color: snow;
+    justify-content: center;
+    align-items: center;
+
+ }
+
+ .contact-info ul li a{
+    color: white;
+    text-decoration: none;
+ }
+
+ .contact-info ul li a:hover{
+    color: rgb(255, 229, 31);
+    background: linear-gradient(to right  , rgb(185, 237, 237) , rgb(240, 122, 142));
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 18px;
+ }
+
+ .contact-info ul li a:active{
+    color: green;
+
+ }
+
+
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+
+
+
+
+
